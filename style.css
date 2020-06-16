@@ -1,0 +1,25 @@
+.maincards {
+    height: 300px;
+    max-height: 900px;
+}
+
+.form {
+    
+
+}
+.inputBox {
+    max-width: fit-content;
+}
+
+button {
+    margin-top: 5px;
+    float: inline-start;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
