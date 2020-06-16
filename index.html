@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -25,7 +26,8 @@
                 <button type="button" id="searchBtn">Search</button>
             </form>
             <br>
-            <ol class="list-group hide searchHistory">
+            <ol class="list-group searchHistory">
+                <div id="searchHistory"></div>
     
             </ol>
         </section>
@@ -36,19 +38,19 @@
 
                 <section class="maincards card m-5 col-12">
                     <div class="card-body">
-                        <h2 class="city icon clear"></h2>=
+                        <h2 class="city icon clear"></h2>
                         <p class="temp clear"></p>
                         <p class="humidity clear"></p>
                         <p class="wind clear"></p>
                         <p class="uv clear"></p>
                     </div>
                 </section>
-                <section class="maincards card m-5 col-12">
+                <section id="borderHide" class="maincards card m-5 col-12">
                     <div class="card-body">
                         <div class="card-title fiveDay clear"></div>
                     </div>
                     <section class="row">
-                        <section class="card m-1 col-2">
+                        <section  class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day1 clear"></p>
                                 <div id="icon1" class="clear"></div>
@@ -56,7 +58,7 @@
                                 <p class="humidity1 clear"></p>
                             </div>
                         </section>
-                        <section class="card m-1 col-2">
+                        <section  class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day2 clear"></p>
                                 <div id="icon2" class="clear"></div>
@@ -64,7 +66,7 @@
                                 <p class="humidity2 clear"></p>
                             </div>
                         </section>
-                        <section class="card m-1 col-2">
+                        <section  class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day3 clear"></p>
                                 <div id="icon3" class="clear"></div>
@@ -72,7 +74,7 @@
                                 <p class="humidity3 clear"></p>
                             </div>
                         </section>
-                        <section class="card m-1 col-2">
+                        <section  class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day4 clear"></p>
                                 <div id="icon4" class="clear"></div>
@@ -80,7 +82,7 @@
                                 <p class="humidity4 clear"></p>
                             </div>
                         </section>
-                        <section class="card m-1 col-2">
+                        <section  class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day5 clear"></p>
                                 <div id="icon5" class="clear"></div>

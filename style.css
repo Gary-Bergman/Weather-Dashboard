@@ -1,3 +1,8 @@
+body {
+    font-family: 'Playfair Display', serif;
+    font-weight: bolder;
+}
+
 .maincards {
     height: 300px;
     max-height: 900px;
@@ -22,4 +27,12 @@ button {
 
 .hide {
     display: none;
+}
+
+#borderHide {
+    border-color: white;
+}
+
+.cardCol {
+    background-color:#e9ecef;
 }
