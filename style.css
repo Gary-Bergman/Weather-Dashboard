@@ -8,16 +8,15 @@ body {
     max-height: 900px;
 }
 
-.form {
-    
-
-}
 .inputBox {
-    max-width: fit-content;
+    /* max-width: fit-content; */
+    /* max-width: 150px; */
+  
 }
 
 button {
     margin-top: 5px;
+    margin-right: 200px;
     float: inline-start;
 }
 
@@ -35,4 +34,16 @@ button {
 
 .cardCol {
     background-color:#e9ecef;
+}
+
+.fave {
+    background-color: lightblue;
+}
+
+.mod {
+    background-color: lightgreen;
+}
+
+.sev {
+    background-color: red;
 }
