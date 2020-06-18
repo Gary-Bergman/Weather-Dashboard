@@ -18,7 +18,7 @@
     <main class="row">
 
         <section class="col-lg-1"></section>
-
+        <!-- Sidebar/city search -->
         <section class="card p-5 col-2">
             <h3>Search for a City:</h3>
             <form class="form" action="action_page.php">
@@ -26,16 +26,14 @@
                 <button type="button" id="searchBtn">Search</button>
             </form>
             <br>
-            <div class="list-group searchHistory">
-                <div id="searchHistory"></div>
-
+            <div class="list-group searchHistory" id="searchHistory">
             </div>
         </section>
 
         <section class="col-8">
             <section class="hide row">
 
-
+                <!-- Daily Forecast -->
                 <section class="maincards card mx-5 mt-5 mb-0 col-12">
                     <div class="card-body">
                         <h2 class="city icon clear"></h2>
@@ -49,11 +47,16 @@
                     </div>
                 </section>
 
+
+                <!-- 5-day Forecast -->
                 <section id="borderHide" class="maincards card mx-5 mt-0 mb-5 col-12">
+
                     <div class="card-body">
                         <div class="card-title fiveDay clear"></div>
                     </div>
+
                     <section class="row">
+
                         <section class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day1 clear"></p>
@@ -62,6 +65,7 @@
                                 <p class="humidity1 clear"></p>
                             </div>
                         </section>
+
                         <section class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day2 clear"></p>
@@ -70,6 +74,7 @@
                                 <p class="humidity2 clear"></p>
                             </div>
                         </section>
+
                         <section class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day3 clear"></p>
@@ -78,6 +83,7 @@
                                 <p class="humidity3 clear"></p>
                             </div>
                         </section>
+
                         <section class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day4 clear"></p>
@@ -86,6 +92,7 @@
                                 <p class="humidity4 clear"></p>
                             </div>
                         </section>
+
                         <section class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day5 clear"></p>
@@ -102,24 +109,10 @@
 
     </main>
 
-
-
-
-
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>

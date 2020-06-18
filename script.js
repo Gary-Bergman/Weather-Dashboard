@@ -25,8 +25,6 @@ var queryUrlUV = "";
 // URL to query the database for 5-day forecast
 var queryUrl5 = "";
 
-// write function for a list tag every time user searches for new city
-
 // localStorage get - Short form
 var arrayCity = JSON.parse(localStorage.getItem("keyCity")) || [];
 var counter = 0;
@@ -56,14 +54,14 @@ if (localStorage.length !== 0) {
 }
 
 
-// Create buttons for each city user inputs and adding new class and prepending to sidebar on page
+// Create buttons for each city user inputs. Add class and prepend to sidebar on page
 function userInput(arg1) {
     list = $("<button>");
-    list.attr("class", "cityBtn").text(arg1);
+    list.attr("class", "cityBtn list-group-item w-100").text(arg1);
     $("#searchHistory").prepend(list);
 }
 
-// Creates an onclick event for button with class cityBtn to call weather data functions
+// Creates an onclick event for button with class cityBtn (sidebar) to call weather data functions
 $(".cityBtn").on("click", function () {
     if ($(".hide")[0]) {
         for (var i = 0; i < 1; i++) {
@@ -84,7 +82,6 @@ $(".cityBtn").on("click", function () {
 // Onclick-show
 searchBtn.addEventListener("click", function () {
     // Show hidden buttons on first click. Do nothing after first click
-    console.log("hi");
     if ($(".hide")[0]) {
         for (var i = 0; i < 1; i++) {
             document.querySelector(".hide").setAttribute("class", "show");
@@ -112,9 +109,10 @@ searchBtn.addEventListener("click", function () {
         ajaxCallToday();
         ajaxCall5();
 
-
+        // Call function userInput (above)
         userInput(cityName);
-        // Call function to save to localStorage
+
+        // Call function (below) to save to localStorage
         saveCity();
 
     }
@@ -127,55 +125,41 @@ function ajaxCallToday() {
         url: queryUrlToday,
         method: "GET"
     }).then(function (weatherData) {
-        console.log(weatherData);
         var weatherIcon = $("<div>");
 
         //Name
-        console.log(weatherData.name);
         $(".city").text(weatherData.name + "        " + day);
 
         // Set variables for latitude and longitude
         lat = weatherData.coord.lat;
-        console.log(lat);
         lon = weatherData.coord.lon;
-        console.log(lon);
 
         // Weather Icons
         var iconNum = weatherData.weather[0].icon;
-        // console.log(iconNum);
         icons = "http://openweathermap.org/img/wn/" + iconNum + ".png";
-        // console.log(icons);
         var imageTag = $("<img>").attr("src", icons);
-        // Appends the icon
         $(".icon").append(imageTag);
 
         //Temp
-        console.log(weatherData.main.temp);
         var fTemp = (weatherData.main.temp - 273.15) * 1.80 + 32;
-        console.log(fTemp.toFixed(0));
         $(".temp").html("Temperature: " + fTemp.toFixed(0) + "&deg;" + "F");
 
         // // Humidity
-        console.log(weatherData.main.humidity);
         $(".humidity").html("Humidity: " + weatherData.main.humidity + "&deg;");
 
 
         // // Wind Speed
-        console.log(weatherData.wind.speed);
         $(".wind").text("Wind Speed: " + weatherData.wind.speed + " mph");
 
         // AJAX callUrlUV after variables for lat and lon are set in parent function above
     }).then(function ajaxCallUV() {
-        console.log("TESTING", lat, lon);
         queryUrlUV = "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude={part}&appid=" + apiKey;
         $.ajax({
             url: queryUrlUV,
             method: "GET"
         }).then(function (weatherData) {
-            console.log(weatherData);
 
             // UV
-            console.log(weatherData.current.uvi);
             var uv = weatherData.current.uvi
             $(".uv").text("UV Index: ");
             $(".uvi").html(weatherData.current.uvi);
@@ -198,7 +182,6 @@ function ajaxCall5() {
         url: queryUrl5,
         method: "GET"
     }).then(function (weatherData) {
-        console.log(weatherData);
         //Day 1-5 using list[4], list[12], list[20], list[28], list[36], respectively
 
         // Set title for box
@@ -212,21 +195,15 @@ function ajaxCall5() {
 
         // Weather Icons
         var iconNum = weatherData.list[4].weather[0].icon;
-        // console.log(iconNum);
         var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
-        // console.log(icons);
         var imageTag = $("<img>").attr("src", icons);
-        // Appends the icon
         $("#icon1").append(imageTag);
 
         // Temp
-        console.log(weatherData.list[4].main.temp);
         var fTemp = (weatherData.list[4].main.temp - 273.15) * 1.80 + 32;
-        console.log(fTemp.toFixed(0));
         $(".temp1").html("Temp: " + fTemp.toFixed(0) + "&deg;" + "F");
 
         // Humidity
-        console.log(weatherData.list[4].main.humidity);
         $(".humidity1").html("Humidity: " + weatherData.list[4].main.humidity + "&deg;");
 
 
@@ -238,7 +215,6 @@ function ajaxCall5() {
         var iconNum = weatherData.list[12].weather[0].icon;
         var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
         var imageTag = $("<img>").attr("src", icons);
-        // Appends the icon
         $("#icon2").append(imageTag);
 
         // Temp
@@ -257,7 +233,6 @@ function ajaxCall5() {
         var iconNum = weatherData.list[20].weather[0].icon;
         var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
         var imageTag = $("<img>").attr("src", icons);
-        // Appends the icon
         $("#icon3").append(imageTag);
 
         // Temp
@@ -276,7 +251,6 @@ function ajaxCall5() {
         var iconNum = weatherData.list[28].weather[0].icon;
         var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
         var imageTag = $("<img>").attr("src", icons);
-        // Appends the icon
         $("#icon4").append(imageTag);
 
         // Temp
@@ -295,7 +269,6 @@ function ajaxCall5() {
         var iconNum = weatherData.list[36].weather[0].icon;
         var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
         var imageTag = $("<img>").attr("src", icons);
-        // Appends the icon
         $("#icon5").append(imageTag);
 
         // Temp
