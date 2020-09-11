@@ -136,7 +136,7 @@ function ajaxCallToday() {
 
         // Weather Icons
         var iconNum = weatherData.weather[0].icon;
-        icons = "http://openweathermap.org/img/wn/" + iconNum + ".png";
+        icons = "https://openweathermap.org/img/wn/" + iconNum + ".png";
         var imageTag = $("<img>").attr("src", icons);
         $(".icon").append(imageTag);
 
@@ -195,7 +195,7 @@ function ajaxCall5() {
 
         // Weather Icons
         var iconNum = weatherData.list[4].weather[0].icon;
-        var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
+        var icons = "https://openweathermap.org/img/wn/" + iconNum + ".png"
         var imageTag = $("<img>").attr("src", icons);
         $("#icon1").append(imageTag);
 
@@ -213,7 +213,7 @@ function ajaxCall5() {
 
         // Weather Icons
         var iconNum = weatherData.list[12].weather[0].icon;
-        var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
+        var icons = "https://openweathermap.org/img/wn/" + iconNum + ".png"
         var imageTag = $("<img>").attr("src", icons);
         $("#icon2").append(imageTag);
 
@@ -231,7 +231,7 @@ function ajaxCall5() {
 
         // Weather Icons
         var iconNum = weatherData.list[20].weather[0].icon;
-        var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
+        var icons = "https://openweathermap.org/img/wn/" + iconNum + ".png"
         var imageTag = $("<img>").attr("src", icons);
         $("#icon3").append(imageTag);
 
@@ -249,7 +249,7 @@ function ajaxCall5() {
 
         // Weather Icons
         var iconNum = weatherData.list[28].weather[0].icon;
-        var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
+        var icons = "https://openweathermap.org/img/wn/" + iconNum + ".png"
         var imageTag = $("<img>").attr("src", icons);
         $("#icon4").append(imageTag);
 
@@ -267,7 +267,7 @@ function ajaxCall5() {
 
         // Weather Icons
         var iconNum = weatherData.list[36].weather[0].icon;
-        var icons = "http://openweathermap.org/img/wn/" + iconNum + ".png"
+        var icons = "https://openweathermap.org/img/wn/" + iconNum + ".png"
         var imageTag = $("<img>").attr("src", icons);
         $("#icon5").append(imageTag);
 

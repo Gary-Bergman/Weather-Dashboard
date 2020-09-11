@@ -47,3 +47,85 @@ button {
 .sev {
     background-color: red;
 }
+
+.nameCard {
+    border: 1px solid transparent;
+    max-height: 76px !important;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-right: -20px !important;
+    margin-left: -20px !important;
+    padding: 0px !important
+}
+
+
+#searchBtn {
+    margin-left: -10px !important;
+}
+
+#searchForm {
+    margin-left: -10px !important;
+    max-width: unset;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .searchName {
+      font-size: 18px;
+    }
+    .nameCard {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-right: -38px !important;
+        margin-left: -20px !important;
+        padding: 0px !important
+    }
+
+  }
+
+@media only screen and (max-width: 400px) {
+    .searchName {
+        font-size: 15px;
+      }
+    }
+
+ 
+
+
+@media only screen and (max-width: 1300px) {
+    #searchBtn {
+        margin-left: -20px !important;
+    }
+
+    #searchForm {
+        margin-left: -20px !important;
+        max-width: 175px;
+    }
+
+    .jumbotron {
+        width: 103%;
+    }
+}  
+
+@media only screen and (max-width: 1000px) {
+    #searchBtn {
+        margin-left: -20px !important;
+    }
+
+    #searchForm {
+        margin-left: -20px !important;
+        max-width: 100px;
+    }
+}  
+
+@media only screen and (max-width: 750px) {
+    #searchBtn {
+        margin-left: -30px !important;
+    }
+
+    #searchForm {
+        margin-left: -30px !important;
+        max-width: 70px;
+        margin-top: -40px !important;
+    }
+ }  

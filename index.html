@@ -20,9 +20,11 @@
         <section class="col-lg-1"></section>
         <!-- Sidebar/city search -->
         <section class="card p-5 col-2">
-            <h3>Search for a City:</h3>
+            <div class="card nameCard">
+                <h3 class="searchName">Search for a City:</h3>
+            </div>
             <form class="form" action="action_page.php">
-                <input type="text" class="inputBox justify-content-center" placeholder="ENTER CITY NAME" name="search">
+                <input type="text" class="inputBox justify-content-center" placeholder="ENTER CITY NAME" name="search" id="searchForm">
                 <button type="button" id="searchBtn">Search</button>
             </form>
             <br>
@@ -47,7 +49,7 @@
                     </div>
                 </section>
 
-                
+
                 <!-- 5-day Forecast -->
                 <section id="borderHide" class="maincards card mx-5 mt-0 mb-5 col-12">
 
@@ -92,7 +94,7 @@
                                 <p class="humidity4 clear"></p>
                             </div>
                         </section>
-                        
+
                         <section class="cardCol card m-1 col-2">
                             <div class="card-body">
                                 <p class="day5 clear"></p>
