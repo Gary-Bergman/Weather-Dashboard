@@ -87,7 +87,13 @@ button {
     .searchName {
         font-size: 15px;
       }
+
+ 
+    .show {
+        margin-top: -49px !important;
     }
+
+}
 
  
 
@@ -103,7 +109,7 @@ button {
     }
 
     .jumbotron {
-        width: 103%;
+        width: 105%;
     }
 }  
 
