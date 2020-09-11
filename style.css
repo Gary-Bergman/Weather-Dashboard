@@ -81,6 +81,15 @@ button {
         padding: 0px !important
     }
 
+    .list-group-item {
+        min-width: 70px;
+        display: block;
+        padding: .75rem 1.25rem;
+        margin-bottom: -1px;
+        margin-left: -28px;
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,.125);
+
   }
 
 @media only screen and (max-width: 400px) {
