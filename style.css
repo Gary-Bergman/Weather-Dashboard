@@ -68,45 +68,7 @@ button {
     max-width: unset;
 }
 
-
-@media only screen and (max-width: 800px) {
-    .searchName {
-      font-size: 18px;
-    }
-    .nameCard {
-        margin-bottom: 20px;
-        margin-top: 10px;
-        margin-right: -38px !important;
-        margin-left: -20px !important;
-        padding: 0px !important
-    }
-
-    .list-group-item {
-        min-width: 70px;
-        display: block;
-        padding: .75rem 1.25rem;
-        margin-bottom: -1px;
-        margin-left: -28px;
-        background-color: #fff;
-        border: 1px solid rgba(0,0,0,.125);
-
-  }
-
-@media only screen and (max-width: 400px) {
-    .searchName {
-        font-size: 15px;
-      }
-
- 
-    .show {
-        margin-top: -49px !important;
-    }
-
-}
-
- 
-
-
+/* Media Queries */
 @media only screen and (max-width: 1300px) {
     #searchBtn {
         margin-left: -20px !important;
@@ -131,7 +93,35 @@ button {
         margin-left: -20px !important;
         max-width: 100px;
     }
-}  
+
+    .list-group-item {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .searchName {
+      font-size: 18px;
+    }
+    .nameCard {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        margin-right: -38px !important;
+        margin-left: -20px !important;
+        padding: 0px !important
+    }
+
+    .list-group-item {
+        min-width: 70px;
+        display: block;
+        padding: .75rem 1.25rem;
+        margin-bottom: -1px;
+        margin-left: -28px;
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,.125);
+        font-size: 10px;
+  }
+}
 
 @media only screen and (max-width: 750px) {
     #searchBtn {
@@ -143,4 +133,18 @@ button {
         max-width: 70px;
         margin-top: -40px !important;
     }
- }  
+}
+
+@media only screen and (max-width: 400px) {
+    .searchName {
+        font-size: 15px;
+      }
+
+ 
+    .show {
+        margin-top: -49px !important;
+        overflow: auto;
+    }
+
+}
+
